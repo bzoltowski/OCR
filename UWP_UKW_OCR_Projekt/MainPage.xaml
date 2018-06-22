@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="OCR_v1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OCR_v1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AccentButtonBackgroundPressed}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="499*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wybierz język:" VerticalAlignment="Top" Width="180" Foreground="White" FontStyle="Italic"/>
+        <ComboBox x:Name="LanguageCBox" HorizontalAlignment="Left" DisplayMemberPath="DisplayName" Margin="10,34,10,0" VerticalAlignment="Top" Width="340" Background="#660F0F0F" Foreground="White" SelectionChanged="LanguageCBox_SelectionChanged"/>
+        <StackPanel Height="72" Margin="10,72,10,0" Orientation="Horizontal">
+            <Button x:Name="OCEBtn" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Height="72" Width="72" Foreground="White" Background="#33838383" Grid.RowSpan="2" Click="OCEBtn_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <Viewbox >
+                    <SymbolIcon Symbol="OpenFile"/>
+                </Viewbox>
+            </Button>
+            <Button x:Name="TPicBtn"  Margin="10,0,0,0"  Height="72" Width="72" Foreground="White" Background="#33838383" Click="TPicBtn_Click" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <Viewbox >
+                    <SymbolIcon Symbol="Camera"/>
+                </Viewbox>
+            </Button>
+            <Button x:Name="InfoBtn" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Height="72" Width="72" Foreground="White" Background="#33838383" Click="InfoBtn_Click" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <Viewbox >
+                    <SymbolIcon Symbol="Help"/>
+                </Viewbox>
+            </Button>
+            <Button x:Name="HistoryBtn" HorizontalAlignment="Stretch" Margin="10,0,0,0" VerticalAlignment="Stretch" Height="72" Width="72" Foreground="White" Background="#33838383" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="HistoryBtn_Click">
+                <Viewbox >
+                    <SymbolIcon Symbol="ShowResults"/>
+                </Viewbox>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
